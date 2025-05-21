@@ -3,5 +3,7 @@
 ## Team Members:
 
 Alejandro Marchini
+
 Carlos Alberto Ortiz Montes De Oca
+
 Swathi Subramanyam Pabbathi
