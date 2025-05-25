@@ -85,9 +85,13 @@ Tune clustering parameters for improved cohesion and separation
 ## Potential Users:
 
 Marketers: Segment audiences and identify target communities
+
 Platform designers: Improve recommendation and engagement algorithms
+
 Academic researchers: Study user behavior and network dynamics
+
 Product teams: Discover user groups for feature rollout strategies
+
 This application fits into the digital marketing and social analytics space. By leveraging graph-based clustering, it enables data-driven segmentation and engagement strategies, uncovers influential nodes, and offers structural insights that businesses and researchers can use to navigate complex social networks effectively.
 
 ### Reference:
