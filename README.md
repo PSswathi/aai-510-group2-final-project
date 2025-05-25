@@ -55,32 +55,51 @@ Features will focus on local structure only, up to 2–3 hops, in line with the 
 
 ## 2. Data Preparation:
 All computed features will be compiled into a pandas DataFrame
+
 Normalization/scaling will be applied (e.g., MinMaxScaler or StandardScaler)
+
 Any NaN or infinite values will be handled appropriately
+
 The final dataset will be in structured tabular format suitable for clustering
+
 ## 3. Exploratory Data Analysis (EDA):
 Visualize feature distributions using histograms and boxplots
+
 Correlation matrix to check feature redundancy
+
 Network visualizations for high-degree nodes and community snapshots
+
 ## 4. Clustering:
 We will apply and compare multiple clustering algorithms:
+
 K-Means Clustering
+
 Agglomerative (Hierarchical) Clustering
+
 DBSCAN (density-based clustering)
+
 Optionally: Spectral Clustering using graph Laplacian embeddings
+
 Optimal number of clusters (k) will be chosen using the elbow method and silhouette scores.
+
 ## 5. Evaluation:
 We will assess clustering performance using unsupervised metrics:
-Silhouette Score
-Calinski-Harabasz Index
+
+Silhouette Score,
+Calinski-Harabasz Index and
 Davies-Bouldin Index
+
 ## 6. Interpretation and Analysis:
 Identify and characterize each cluster: high centrality groups, isolated users, bridge nodes, etc.
+
 Explore community overlaps, potential influencers, and anomalies
+
 Visualize clusters using dimensionality reduction (e.g., PCA or t-SNE)
 ## 7. Refinement and Iteration:
 Revisit feature engineering or clustering algorithm based on evaluation
+
 Experiment with edge pruning, alternate centrality measures, and subgraph analysis
+
 Tune clustering parameters for improved cohesion and separation
 
 ## Potential Users:
