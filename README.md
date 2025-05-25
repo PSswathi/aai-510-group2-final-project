@@ -28,6 +28,7 @@ Each line in the dataset (facebook_combined.txt) represents an undirected edge b
 The dataset will be loaded using NetworkX or igraph:
 
 import networkx as nx
+
 G = nx.read_edgelist('facebook_combined.txt', create_using=nx.Graph(),nodetype=int)
 
 
