@@ -35,14 +35,23 @@ G = nx.read_edgelist('facebook_combined.txt', create_using=nx.Graph(),nodetype=i
 
 ## 1.Feature Engineering (Node-Level Local Features):
 We will derive local graph features for each node that describe its structural role in the network. These include:
+
 Degree: Number of immediate neighbors
+
 Clustering Coefficient: Measure of how interconnected a node’s neighbors are
+
 Betweenness Centrality: Measures node’s role in bridging communities
+
 Closeness Centrality: Inverse of the sum of distances to all reachable nodes
+
 Average Neighbor Degree: Average degree of a node’s neighbors
+
 Ego Network Size: Number of nodes in the 1-hop ego network
+
 Local Efficiency: Efficiency of communication in the ego network
+
 Features will focus on local structure only, up to 2–3 hops, in line with the problem constraints.
+
 ## 2. Data Preparation:
 All computed features will be compiled into a pandas DataFrame
 Normalization/scaling will be applied (e.g., MinMaxScaler or StandardScaler)
