@@ -18,9 +18,11 @@ This project operates at the intersection of graph theory, unsupervised learning
 Dataset:
 
 The dataset is sourced from the Stanford Network Analysis Project (SNAP) and consists of the Facebook Ego Network. It includes:
-4039 nodes (users)
-88,234 undirected edges, representing mutual friendships
+
+4039 nodes (users),
+88,234 undirected edges, representing mutual friendships,
 No additional node attributes; all relationships are structure-based
+
 Each line in the dataset (facebook_combined.txt) represents an undirected edge between two users. This simple format supports building an unweighted, undirected graph, which can be directly imported into graph libraries like NetworkX or igraph for further analysis.
 
 ## Working with Graph Data:
