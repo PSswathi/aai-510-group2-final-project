@@ -1,5 +1,7 @@
 # aai-510-group2-final-project
 
+# Cluster Quest - Mapping Social Cohorts in Facebook Networks
+
 ## Team Members:
 
 Alejandro Marchini
@@ -22,8 +24,6 @@ source venv/bin/activate
 ### Install required packages from requirements.txt
 pip install -r requirements.txt
 
-
-### Cluster Quest - Mapping Social Cohorts in Facebook Networks
 
 ## Objective:
 
