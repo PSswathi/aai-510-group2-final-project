@@ -10,16 +10,16 @@ Swathi Subramanyam Pabbathi
 
 ## Environment setup:
 
-# Step into your project directory
+### Step into your project directory
 cd your-project/
 
-# Create virtual environment (if not done already)
+### Create virtual environment (if not done already)
 python3 -m venv venv
 
-# Activate the virtual environment
+### Activate the virtual environment
 source venv/bin/activate
 
-# Install required packages from requirements.txt
+### Install required packages from requirements.txt
 pip install -r requirements.txt
 
 
