@@ -6,3 +6,4 @@ python-igraph
 igraph
 scikit-learn
 seaborn
+pycairo 
