@@ -138,6 +138,8 @@ This application fits into the digital marketing and social analytics space. By 
 ### Reference:
 McAuley, J., & Leskovec, J. (2012). Learning to discover social circles in ego networks. Stanford Network Analysis Project (SNAP). https://snap.stanford.edu/data/ego-Facebook.html
 
+https://bookdown.org/omarlizardo/_main/6-origins.html#origins
+
 
 
 
