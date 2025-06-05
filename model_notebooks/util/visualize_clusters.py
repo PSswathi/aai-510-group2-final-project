@@ -9,7 +9,7 @@ def visualize_clusters(data, labels):
     plt.figure(figsize=(10, 6))
     scatter = plt.scatter(reduced[:, 0], reduced[:, 1], c=labels, cmap='tab20', s=10, alpha=0.8)
 
-    # Highlight noise if DBSCAN-style label -1 is present
+    # Highlight noise
     if -1 in labels:
         noise_mask = np.array(labels) == -1
         plt.scatter(reduced[noise_mask, 0], reduced[noise_mask, 1], c='red', s=10, label='Noise', alpha=0.6)
