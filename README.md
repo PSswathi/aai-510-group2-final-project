@@ -46,6 +46,8 @@ Each line in the dataset (facebook_combined.txt) represents an undirected edge b
 
 ## Working with Graph Data:
 
+![alt text](images/graph.png)
+
 The dataset will be loaded using NetworkX or igraph:
 
 import networkx as nx
@@ -90,40 +92,68 @@ Correlation matrix to check feature redundancy
 
 Network visualizations for high-degree nodes and community snapshots
 
+![alt text](images/graph.png)
+
 ## 4. Clustering:
 We will apply and compare multiple clustering algorithms:
 
 K-Means Clustering
 
+![alt text](images/kmeans.png)
+
+Optimal number of clusters (k) will be chosen using the elbow method and silhouette scores.
+
+
 Agglomerative (Hierarchical) Clustering
+
+![alt text](images/hierarcheal.png)
 
 DBSCAN (density-based clustering)
 
-Optionally: Spectral Clustering using graph Laplacian embeddings
+![alt text](images/dbscan.png)
 
-Optimal number of clusters (k) will be chosen using the elbow method and silhouette scores.
 
 ## 5. Evaluation:
 We will assess clustering performance using unsupervised metrics:
 
-Silhouette Score,
-Calinski-Harabasz Index and
-Davies-Bouldin Index
+Silhouette Score
+
+After accessing found to be Agglomerative (Hierarchical) Clustering performs with high score.
+
+![alt text](images/bestmodel.png)
+
 
 ## 6. Interpretation and Analysis:
-Identify and characterize each cluster: high centrality groups, isolated users, bridge nodes, etc.
+Identified and characterize each cluster: high centrality groups, isolated users, bridge nodes, etc.
 
-Explore community overlaps, potential influencers, and anomalies
+Explored community overlaps, potential influencers, and anomalies
 
-Visualize clusters using dimensionality reduction (e.g., PCA or t-SNE)
+![alt text](images/cluster-insights.png)
+
+Visualize clusters using dimensionality reduction PCA
+
+![alt text](images/pcavisual.png)
+
+Overall Implications for the Recommendation Engine
+
+1.	Personalization by Cluster: Instead of a one-size-fits-all model, build cluster-aware recommenders that adapt based on user segment traits (e.g., niche, influencer, isolated).
+
+2.	Diversity and Exploration: For clusters with tight-knit behaviors (e.g., Cluster 1), introduce diversity-boosting algorithms to avoid redundancy and widen exposure.
+
+3.	Cold Start Mitigation: For inactive or new users (Clusters 2, 5), leverage connectivity-based clustering to recommend what similar users are engaging with.
+
+4.	Influencer-Based Diffusion: Use clusters like 6 (influencers) to test content virality, then route high-performing content to other clusters (0, 3, etc.).
+
+5.	Behavioral Targeting: Clustering unlocks deeper behavioral signals (e.g., local density, assortativity, participation), enabling multi-dimensional ranking in recommender models.
+
+6.	Hybrid Recommendation Models: Combine graph-based embeddings (e.g., Node2Vec, DeepWalk) with cluster-specific collaborative filtering for improved accuracy.
+
+
 ## 7. Refinement and Iteration:
-Revisit feature engineering or clustering algorithm based on evaluation
 
-Experiment with edge pruning, alternate centrality measures, and subgraph analysis
+Tuned clustering parameters for improved cohesion and separation using grid search
 
-Tune clustering parameters for improved cohesion and separation
-
-## Potential Users:
+## Potential Users also include :
 
 Marketers: Segment audiences and identify target communities
 
@@ -136,9 +166,17 @@ Product teams: Discover user groups for feature rollout strategies
 This application fits into the digital marketing and social analytics space. By leveraging graph-based clustering, it enables data-driven segmentation and engagement strategies, uncovers influential nodes, and offers structural insights that businesses and researchers can use to navigate complex social networks effectively.
 
 ### Reference:
+
 McAuley, J., & Leskovec, J. (2012). Learning to discover social circles in ego networks. Stanford Network Analysis Project (SNAP). https://snap.stanford.edu/data/ego-Facebook.html
 
 https://bookdown.org/omarlizardo/_main/6-origins.html#origins
+
+
+### Full architectural diagram :
+
+![alt text](images/fullarchitecture.png)
+
+
 
 
 
