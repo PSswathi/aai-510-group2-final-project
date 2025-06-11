@@ -165,7 +165,7 @@ Product teams: Discover user groups for feature rollout strategies
 
 This application fits into the digital marketing and social analytics space. By leveraging graph-based clustering, it enables data-driven segmentation and engagement strategies, uncovers influential nodes, and offers structural insights that businesses and researchers can use to navigate complex social networks effectively.
 
-### Reference:
+### References:
 
 McAuley, J., & Leskovec, J. (2012). Learning to discover social circles in ego networks. Stanford Network Analysis Project (SNAP). https://snap.stanford.edu/data/ego-Facebook.html
 
