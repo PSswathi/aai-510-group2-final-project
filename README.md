@@ -136,17 +136,17 @@ Visualize clusters using dimensionality reduction PCA
 
 Overall Implications for the Recommendation Engine
 
-1.	Personalization by Cluster: Instead of a one-size-fits-all model, build cluster-aware recommenders that adapt based on user segment traits (e.g., niche, influencer, isolated).
+1.	Personalization by Cluster: Instead of a one-size-fits-all model, build cluster-aware recommenders that adapt based on user segment traits (e.g., niche, influencer, isolated). Clustering first has been shown to increase the quality of the recommendation rankings (Lizenberger et al, 2024)
 
 2.	Diversity and Exploration: For clusters with tight-knit behaviors (e.g., Cluster 1), introduce diversity-boosting algorithms to avoid redundancy and widen exposure.
 
-3.	Cold Start Mitigation: For inactive or new users (Clusters 2, 5), leverage connectivity-based clustering to recommend what similar users are engaging with.
+3.	Cold Start Mitigation: For inactive or new users (Clusters 2, 5), leverage connectivity-based clustering to recommend what similar users are engaging with. (Wang et al, 2025)
 
 4.	Influencer-Based Diffusion: Use clusters like 6 (influencers) to test content virality, then route high-performing content to other clusters (0, 3, etc.).
 
-5.	Behavioral Targeting: Clustering unlocks deeper behavioral signals (e.g., local density, assortativity, participation), enabling multi-dimensional ranking in recommender models.
+5.	Behavioral Targeting: Clustering unlocks deeper behavioral signals (e.g., local density, assortativity, participation), enabling multi-dimensional ranking in recommender models. (Wu et al, 2025)
 
-6.	Hybrid Recommendation Models: Combine graph-based embeddings (e.g., Node2Vec, DeepWalk) with cluster-specific collaborative filtering for improved accuracy.
+6.	Hybrid Recommendation Models: Combine graph-based embeddings (e.g., Node2Vec, DeepWalk) with cluster-specific collaborative filtering for improved accuracy. (Ying et al, 2018)
 
 
 ## 7. Refinement and Iteration:
@@ -171,6 +171,13 @@ McAuley, J., & Leskovec, J. (2012). Learning to discover social circles in ego n
 
 https://bookdown.org/omarlizardo/_main/6-origins.html#origins
 
+Lizenberger, A., Pfeifer, F., & Polewka, B. (2024, May 28). Rethinking recommender systems: Cluster‑based algorithm selection (arXiv:2405.18011). arXiv. https://doi.org/10.48550/arXiv.2405.18011
+
+Wang, H., Dai, Y., & Wang, W. (2025). Meta‑learning with graph community detection for cold‑start user clustering. Applied Sciences, 15(8), 4503. https://doi.org/10.3390/app15084503 
+
+Wu, X., Loveland, D., Chen, R., Liu, Y., Chen, X., Neves, L., Jadbabaie, A., Ju, M., Shah, N., & Zhao, T. (2025, January 29). GraphHash: Graph clustering enables parameter efficiency in recommender systems. In Proceedings of the ACM Web Conference (WWW ’25). https://openreview.net/pdf?id=U3TzIAg5Dg
+
+Ying, R., He, R., Chen, K., Eksombatchai, P., Hamilton, W. L., & Leskovec, J. (2018, June 6). Graph Convolutional Neural Networks for web‑scale recommender systems (arXiv:1806.01973). arXiv. https://doi.org/10.48550/arXiv.1806.01973
 
 ### Full architectural diagram :
 
