@@ -1,6 +1,6 @@
 # aai-510-group2-final-project
 
-# Cluster Quest - Unlocking Social Networks with graph clustering
+# Cluster Quest - Unlocking Social Networks with Graph Clustering
 
 ## Team Members:
 
