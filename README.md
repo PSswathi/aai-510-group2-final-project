@@ -1,6 +1,6 @@
 # aai-510-group2-final-project
 
-# Cluster Quest - Mapping Social Cohorts in Facebook Networks
+# Cluster Quest - Unlocking Social Networks with graph clustering
 
 ## Team Members:
 
