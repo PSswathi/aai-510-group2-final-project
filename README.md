@@ -92,7 +92,11 @@ Correlation matrix to check feature redundancy
 
 Network visualizations for high-degree nodes and community snapshots
 
-![alt text](images/graph.png)
+![alt text](images/distribution1.png)
+
+![alt text](images/distribution2.png)
+
+![alt text](images/boxplot.png)
 
 ## 4. Clustering:
 We will apply and compare multiple clustering algorithms:
