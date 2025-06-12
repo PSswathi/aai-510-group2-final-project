@@ -183,7 +183,103 @@ Ying, R., He, R., Chen, K., Eksombatchai, P., Hamilton, W. L., & Leskovec, J. (2
 
 ![alt text](images/fullarchitecture.png)
 
+### Deployment documentation:
 
+This outlines the deployment pipeline and infrastructure used to operationalize the social network graph clustering model and enable real-time recommendation generation for users.
+
+### System Layers:
+
+| **Layer**         | **Component**              | **Description**                                                                 |
+|-------------------|----------------------------|---------------------------------------------------------------------------------|
+| Ingestion         | Web Client / App           | Captures user actions (clicks, friend requests, post interactions, etc.)        |
+| Ingestion         | REST API Gateway           | Receives and validates incoming events; sends to Kafka                          |
+| Streaming         | Apache Kafka               | Manages real-time event streams for scalable ingestion                          |
+| Storage           | Graph Database (Neo4j)     | Stores social network structure and node relationships                          |
+| Processing        | Clustering Engine (Python) | Performs KMeans, DBSCAN, HAC clustering on node features                        |
+| Serving           | Recommendation API         | Exposes recommendations based on user cluster assignments                       |
+| Visualization     | Streamlit/Tableau Dashboard| Displays insights, cluster stats, and segment behavior                          |
+
+### Infrastructure components:
+
+| **Component**        | **Technology**                   | **Purpose**                                                                 |
+|----------------------|----------------------------------|-----------------------------------------------------------------------------|
+| Backend API          | FastAPI / Flask                  | Receives events and exposes recommendation endpoints                        |
+| Stream Buffer        | Apache Kafka / AWS MSK           | Buffers and distributes real-time user activity events                      |
+| Database             | Neo4j / PostgreSQL + NetworkX    | Stores graph data and computed cluster labels                               |
+| ML Engine            | scikit-learn + pandas + PCA      | Performs clustering, dimensionality reduction, and feature transformation   |
+| Containerization     | Docker + AWS EC2 or ECS          | Enables scalable and portable deployment                                    |
+| Monitoring           | AWS CloudWatch / Prometheus      | Tracks system metrics, model performance, and logs                          |
+| Storage              | AWS S3 / EBS                     | Backup model artifacts, raw data, and logs                                  |
+
+### Model Deployment Flow
+
+![alt text](images/Modeldeploymentpipeline.png)
+
+
+### Deployment Steps:
+
+Step 1: Build Containers : 
+
+* Dockerfile for API and clustering service
+
+* Separate images for ingestion and recommendation layers
+
+Step 2: Provision Infrastructure:
+
+* Use AWS CloudFormation / Terraform to set up:
+
+* EC2 instances, Kafka cluster (Amazon MSK or self-managed), S3 for backup, ecurity Groups, IAM Roles
+
+Step 3: Model Inference Service:
+
+* Deploy FastAPI app on EC2 or AWS ECS with model loaded in memory
+
+* Expose /recommend/{user_id} endpoint
+
+Step 4: Monitor and Scale:
+
+* Auto-scale EC2 based on CPU
+
+* Kafka topic partitions scale with load
+
+* Use logging (e.g., ELK stack) for observability
+
+### Continuous Integration / Deployment (CI/CD):
+
+GitHub Actions / GitLab CI:
+
+* Lint Python code and check formatting
+
+* Build and push Docker image
+
+* Run unit tests for data pipeline
+
+* Deploy to AWS via Terraform or CLI
+
+### Data Refresh & Model Retraining
+
+| Task                      | Frequency                |
+|---------------------------|--------------------------|
+| Community Detection       | Weekly                   |
+| Graph Updates             | Near Real-Time via Kafka |
+| Recommendation API Update| On-demand or Daily Batch |
+
+
+### Security & Access Control:
+
+* Token-based auth (e.g., JWT) for API endpoints
+
+* IAM roles with least privilege access to S3, EC2, and databases
+
+* HTTPS enforced for all external communications
+
+### Future Improvements:
+
+* Add Redis caching for fast recommendation fetch
+
+* Real-time stream clustering with Spark Structured Streaming
+
+* Deploy as microservices on Kubernetes
 
 
 
