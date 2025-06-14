@@ -260,6 +260,12 @@ GitHub Actions / GitLab CI:
 
 * Deploy to AWS via Terraform or CLI
 
+### Automate Workflow
+
+*  Use Airflow / AWS Lambda + EventBridge to re-run clustering daily or weekly.
+  
+*  Save outputs to S3 or push to a database (e.g., DynamoDB, MongoDB, or Postgres).
+
 ### Data Refresh & Model Retraining
 
 | Task                      | Frequency                |
