@@ -57,6 +57,13 @@ G = nx.read_edgelist('facebook_combined.txt', create_using=nx.Graph(),nodetype=i
 
 ## Approach and Methodology:
 
+![alt text](images/flowchart.png)
+
+Problem Understanding and Dataset Overview
+*	Objective: Improve personalization and engagement in social platforms by leveraging structural patterns from the social graph rather than surface-level metrics.
+*	Dataset: Facebook Combined Dataset — an undirected graph of user-user connections (edges) without profile or activity features.
+*	Challenge: No user-generated content or activity logs; only the graph structure is available.
+
 ## 1.Feature Engineering (Node-Level Local Features):
 We will derive local graph features for each node that describe its structural role in the network. These include:
 
