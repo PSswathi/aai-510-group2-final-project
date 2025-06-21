@@ -28,6 +28,8 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 
+final project coding and implementation notebook,  aai-510-group2-final-project-reviewed-1.ipynb
+
 
 ## Objective:
 
